@@ -1,0 +1,21 @@
+.template-slider {
+  max-width: 428px;
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 40px;
+  &__inner {
+    max-width: 330px;
+    margin: auto;
+    width: 100%;
+    .slick-list {
+      overflow: visible;
+    }
+    .box {
+      padding: 0 14px;
+      img {
+        @include box-shadow(10px 10px 10px rgba(0,0,0,0.04))
+      }
+    }
+  }
+}

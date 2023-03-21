@@ -1,0 +1,71 @@
+.page-title {
+    position: relative;
+
+
+    >h1 {
+        background: #fff;
+        @include shadow;
+        @include font-size(18);
+        padding: 15px 20px;
+
+        @include SP {
+            padding: 21px 10px;
+            @include font-size(16);
+        }
+
+        @include SP {
+            display: none;
+        }
+    }
+
+    ul {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        @include transform(translateY(-50%));
+
+        @include SP {
+            position: relative;
+            top: auto;
+            right: auto;
+            margin-top: 20px;
+            padding-left: 10px;
+            overflow: scroll;
+            white-space: nowrap;
+            padding-bottom: 12px;
+        }
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            @include font-size(12);
+            padding-right: 18px;
+            position: relative;
+
+            &:last-child {
+                &:before {
+                    content: none;
+                }
+            }
+
+            &:before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                position: absolute;
+                right: 6px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                border-top: 1px solid;
+                border-right: 1px solid;
+                @include transform(rotate(45deg));
+            }
+
+            a {
+                color: $maincolor;
+                display: block;
+            }
+        }
+    }
+}

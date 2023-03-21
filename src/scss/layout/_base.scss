@@ -1,0 +1,271 @@
+/**
+ * !!! 変数の定義 !!!
+ * 変数は作りすぎず、デザインコンポーネント、もしくはシンボルを元に作成する
+ * またGoogle Font等の特殊なウェブフォントの場合、そのフォント名を定義してわかりやすくする
+ */
+$gothic: 'Source Sans Pro',
+"ヒラギノ角ゴ Pro",
+"Hiragino Kaku Gothic Pro",
+"メイリオ",
+"游ゴシック",
+YuGothic,
+Helvetica,
+noto-sans,
+"Meiryo",
+sans-serif;
+
+$serif: "游明朝",
+YuMincho,
+"ヒラギノ明朝 ProN W3",
+"Hiragino Mincho ProN",
+"HG明朝E",
+"ＭＳ Ｐ明朝",
+serif;
+
+
+/**
+ * !!! ブレークポイント !!!
+ */
+@mixin PC {
+    @include min-screen(768px) {
+        @content;
+    }
+}
+
+@mixin SP {
+    @include max-screen(767px) {
+        @content;
+    }
+}
+
+.pc {
+    @include SP {
+        display: none !important;
+    }
+}
+
+.sp {
+    @include PC {
+        display: none !important;
+    }
+}
+
+/**
+ * !!! browsersyncのアラートを非表示 !!!
+ */
+#__bs_notify__ {
+    display: none !important;
+}
+
+
+/**
+ * !!! ページCSS基本設定 !!!
+ * 基本的にこの箇所は操作しないようにする
+ * ----------------ここから----------------
+ */
+html {
+    font-size: 62.5%;
+    font-family: $gothic;
+    font-weight: 600;
+}
+
+body {}
+
+* {
+    @include font-size(14);
+    box-sizing: border-box;
+}
+
+#whole {
+    max-width: 428px;
+    margin: auto;
+    width: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+textarea,
+input[type="number"] {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+    border-radius: 0;
+    -webkit-box-sizing: content-box;
+    -webkit-appearance: button;
+    appearance: button;
+    border: none;
+    box-sizing: border-box;
+
+    &::-webkit-search-decoration {
+        display: none;
+    }
+
+    &::focus {
+        outline-offset: -2px;
+    }
+}
+
+.row {
+    @include clearfix;
+}
+
+/**
+ * ----------------ここまで----------------
+ */
+
+
+/**
+ * !!! FlexBox Rule !!!
+ * 都度scssを記載するのではなく、クラスで定義し、クラスの付け外しで管理すること。
+ */
+
+@mixin flex-row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flex-row {
+    @include flex-row;
+}
+
+
+/**
+ * !!! Inner Rule !!!
+ * 最初にデザインを確認し、存在するinnerパターンを作成すること
+ * max-width指定のみだと、画面幅を縮小するときに余白が消えるため、paddingをつけること
+ * 例) innerが1000pxであれば、
+ *     max-width: 1060px;
+ *     padding: 0 30px;
+ */
+
+.inner {
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @include SP {
+        padding: 0 20px;
+    }
+}
+
+.inner-small {
+    max-width: 860px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @include SP {
+        padding: 0 0px;
+    }
+}
+
+[data-trigger] {
+    position: relative;
+    top: 60px;
+    @include transition(top .8s, opacity .8s);
+    opacity: 0;
+
+    &.visible {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+// .inner-large {
+// }
+// .inner-medium {
+// }
+// .inner-small {
+// }
+
+/* 拡大時チラつき防止 */
+.pswp__img--placeholder {
+    opacity: 0;
+}
+
+
+
+
+@for $value from 0 to 100 {
+    .mt-#{$value * 1} {
+        margin-top: $value * 1px !important;
+    }
+}
+
+@for $value from 0 to 100 {
+    .sp-mt-#{$value * 1} {
+        @include SP {
+            margin-top: $value * 1px !important;
+        }
+    }
+}
+
+@for $value from 0 to 100 {
+    .p-#{$value * 1} {
+        padding: $value * 1px !important;
+    }
+}
+
+@for $value from 0 to 100 {
+    .pt-#{$value * 1} {
+        padding-top: $value * 1px !important;
+    }
+}
+
+@for $value from 0 to 100 {
+    .sp-pt-#{$value * 1} {
+        @include SP {
+            padding-top: $value * 1px !important;
+        }
+    }
+}
+
+@for $value from 0 to 101 {
+    .pb-#{$value * 1} {
+        padding-bottom: $value * 1px !important;
+    }
+}
+
+@for $value from 0 to 100 {
+    .sp-pb-#{$value * 1} {
+        @include SP {
+            padding-bottom: $value * 1px !important;
+        }
+    }
+}
+
+
+@for $value from 0 to 100 {
+    .pl-#{$value * 1} {
+        padding-left: $value * 1px !important;
+    }
+}
+
+@for $value from 0 to 100 {
+    .pr-#{$value * 1} {
+        padding-right: $value * 1px !important;
+    }
+}

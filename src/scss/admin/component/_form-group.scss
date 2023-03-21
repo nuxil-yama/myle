@@ -1,0 +1,301 @@
+.form-group {
+    // margin-top: 28px;
+
+    >label {
+        display: block;
+        @include font-size(12);
+        margin-bottom: 14px;
+        position: relative;
+
+        a {
+            color: $maincolor;
+            float: right;
+        }
+
+        small {
+            display: block;
+            color: #999;
+            line-height: 1.4;
+            margin-top: 4px;
+
+            &.inline {
+                margin-top: 0;
+                display: inline-block;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    >select {
+        width: 100%;
+        display: block;
+        padding: 10px 15px;
+        height: 42px;
+        @include font-size(16);
+        background-color: #fdfdff;
+        border: 1px solid #e4e6fc;
+        line-height: 1;
+
+        &.input-large {
+            width: 400px;
+        }
+    }
+
+
+    textarea,
+    >input[type="text"],
+    >input[type="email"],
+    >input[type="password"],
+    >input[type="date"],
+    >input[type="tel"],
+    >input[type="number"] {
+        width: 100%;
+        display: block;
+        padding: 10px 15px;
+        height: 42px;
+        @include font-size(16);
+        background-color: #fdfdff;
+        border: 1px solid #e4e6fc;
+
+        &.input-large {
+            width: 400px;
+        }
+
+    }
+
+    textarea {
+        height: 160px;
+        line-height: 1.6;
+    }
+
+    >input[type="checkbox"] {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:checked {
+            &+label {
+                &:after {
+                    @include transform(rotate(45deg) scale(1));
+                    opacity: 1;
+                }
+            }
+        }
+
+        &+label {
+            color: #495057;
+            @include font-size(13);
+            position: relative;
+            padding-left: 22px;
+
+            &:before {
+                content: "";
+                background: #ddd;
+                width: 16px;
+                height: 16px;
+                border-radius: 4px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+            &:after {
+                content: "";
+                width: 3px;
+                height: 6px;
+                border-bottom: 2px solid $maincolor;
+                border-right: 2px solid $maincolor;
+                position: absolute;
+                left: 5px;
+                top: -2px;
+                bottom: 0;
+                margin: auto;
+                @include transform(rotate(45deg) scale(1.4));
+                opacity: 0;
+                @include transition(opacity .3s, transform .3s);
+            }
+        }
+    }
+
+    &__row {
+
+        >textarea,
+        >input[type="text"],
+        >input[type="email"],
+        >input[type="password"],
+        >input[type="date"],
+        >input[type="tel"],
+        >input[type="number"] {
+            display: inline-block;
+            vertical-align: middle;
+            width: 200px;
+        }
+    }
+
+    &__intermediate {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 20px;
+    }
+
+    &__checkbox {
+        >label {
+            display: block;
+            position: relative;
+
+            >input {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 1px;
+                height: 1px;
+                opacity: 0;
+                pointer-events: none;
+
+                &:checked {
+                    &+span {
+                        // width: 100px;
+
+                        &:before {
+                            content: "";
+                            width: 3px;
+                            height: 6px;
+                            border-bottom: 2px solid $maincolor;
+                            border-right: 2px solid $maincolor;
+                            position: absolute;
+                            left: 7px;
+                            top: -2px;
+                            bottom: 0;
+                            margin: auto;
+                            @include transform(rotate(45deg) scale(1.4));
+                            // opacity: 0;
+                            @include transition(opacity .3s, transform .3s);
+                        }
+                    }
+                }
+            }
+
+            >span {
+                display: block;
+                width: 22px;
+                height: 22px;
+                border-radius: 2px;
+                border: 1px solid #ccc;
+                margin-top: 12px;
+                position: relative;
+            }
+        }
+    }
+}
+
+>textarea,
+>input[type="text"],
+>input[type="email"],
+>input[type="password"],
+>input[type="date"],
+>input[type="tel"],
+>input[type="number"] {
+    &.form-control {
+        display: block;
+        width: 100%;
+        height: calc(2.25rem + 2px);
+        padding: .375rem .75rem;
+        @include font-size(10);
+        line-height: 1.5;
+        color: #495057;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        @include transition(border-color .15s ease-in-out, box-shadow .15s ease-in-out);
+        background-color: #fdfdff;
+        border-color: #e4e6fc;
+
+        &:focus {
+            border-color: $maincolor;
+            @include shadow-input;
+        }
+
+    }
+}
+
+
+textarea {
+    width: 100%;
+    min-height: 80px;
+    resize: none !important;
+    line-height: 1.5;
+
+    @include SP {
+        min-height: 120px;
+    }
+}
+
+.form-control {
+    &--inline {
+        display: inline-block !important;
+        vertical-align: baseline !important;
+    }
+
+    &--w20 {
+        width: 20px !important;
+    }
+
+    &--w30 {
+        width: 30px !important;
+    }
+
+    &--w40 {
+        width: 40px !important;
+    }
+
+    &--w50 {
+        width: 50px !important;
+    }
+
+    &--w60 {
+        width: 60px !important;
+    }
+
+    &--w70 {
+        width: 70px !important;
+    }
+
+    &--w80 {
+        width: 80px !important;
+    }
+
+    &--w90 {
+        width: 90px !important;
+    }
+
+    &--w100 {
+        width: 100px !important;
+    }
+
+    &--w110 {
+        width: 110px !important;
+    }
+
+    &--w120 {
+        width: 120px !important;
+    }
+
+    &--w130 {
+        width: 130px !important;
+    }
+
+    &--w140 {
+        width: 140px !important;
+    }
+
+    &--w150 {
+        width: 150px !important;
+    }
+
+    &--w160 {
+        width: 160px !important;
+    }
+}

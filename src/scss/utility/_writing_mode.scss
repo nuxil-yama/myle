@@ -1,0 +1,16 @@
+@mixin writing-mode( $orientation:'h', $direction:'rl' )
+{
+  @if $orientation == 'v' {
+    -ms-writing-mode: tb- + $direction;
+    -webkit-writing-mode: vertical- + $direction;
+    -moz-writing-mode: vertical- + $direction;
+    -o-writing-mode: vertical- + $direction;
+    writing-mode: vertical- + $direction;
+  } @else {
+    -ms-writing-mode: lr-tb;
+    -webkit-writing-mode: horizontal-tb;
+    -moz-writing-mode: horizontal-tb;
+    -o-writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
+  }
+}

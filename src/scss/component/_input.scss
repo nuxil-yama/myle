@@ -1,0 +1,145 @@
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none transparent;
+  vertical-align: middle;
+  font-size: inherit;
+  color: inherit;
+  // box-sizing: content-box;
+}
+
+.input-text {
+  label {
+    span {
+      display: block;
+      @include font-size(14);
+      line-height: 1.428571429;
+      padding-bottom: 8px;
+    }
+    textarea,
+    input {
+      display: block;
+      border: 2px solid #E6E6E6;
+      border-radius: 10px;
+      @include font-size(14);
+      width: 100%;
+      padding: 12px 14px;
+      font-weight: 300;
+    }
+  }
+}
+
+.input-inline-text {
+  label {
+    font-size: 0;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      @include font-size(14);
+      line-height: 1.428571429;
+      // padding-bottom: 8px;
+      width: 110px;
+    }
+    input {
+      width: calc(100% - 110px);
+      display: inline-block;
+      vertical-align: middle;
+      border: 2px solid #E6E6E6;
+      border-radius: 10px;
+      @include font-size(14);
+      // width: 100%;
+      padding: 12px 14px;
+    }
+  }
+}
+
+.input-file {
+  p {
+    @include font-size(13);
+    small {
+      font-weight: normal;
+      @include font-size(12);
+      display: inline-block;
+      margin-left: 4px;
+    }
+  }
+  label {
+    display: block;
+    border: 2px solid #E6E6E6;
+    border-radius: 10px;
+    @include font-size(14);
+    height: 338px;
+    position: relative;
+    margin-top: 24px;
+    overflow: hidden;
+    cursor: pointer;
+    input {
+      position: absolute;
+      left: 0;top: 0;width: 1px;height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+    span {
+      div {
+        position: absolute;
+        left: 0;top: 0;width: 100%;height: 100%;
+        background-size: cover;background-position: center;
+      }
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include transform(translate(-50%,-50%));
+      }
+    }
+  }
+}
+
+.input-select {
+  position: relative;
+  &:before {
+    content: "▼";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+  select {
+    display: block;
+    width: 100%;
+    padding: 14px 14px;
+    padding-right: 25px;
+    border: 2px solid #E6E6E6;
+    border-radius: 10px;
+    @include font-size(14);
+    width: 100%;
+  }
+}
+
+.form-group {
+  &__button {
+    a,
+    button {
+      text-align: center;
+      cursor: pointer;
+      @include font-size(18);
+      color: #fff;
+      border-radius: 5px;
+      padding: 16px 0;
+      background-image: url(../images/gradient.png);
+      width: 100%;
+      font-weight: 600;
+      background-position: center;
+      background-size: cover;
+      display: block;
+      span {
+        
+      }
+    }
+  }
+}

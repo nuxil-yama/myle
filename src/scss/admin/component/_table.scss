@@ -1,0 +1,138 @@
+table.table.dataTable,
+table.table {
+    width: 100%;
+    table-layout: fixed;
+
+
+    th,
+    td {
+        padding: 4px 10px;
+        @include font-size(12);
+
+        small {
+            display: block;
+            color: rgb(105, 115, 134);
+            @include font-size(10);
+        }
+
+        .tel-icon {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+
+    thead {
+        th {
+            background: #ddd;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: normal;
+            border-bottom: 1px solid #eee;
+        }
+    }
+
+    &.table-small {
+
+        tbody,
+        thead {
+
+            th,
+            td {
+                padding: 5px 8px;
+                @include font-size(12);
+            }
+        }
+    }
+
+    tbody {
+        th {
+            background: #eee;
+            border-top: 1px solid #f5f5f5;
+        }
+
+        td {
+            a {
+                color: #36a8f1;
+                text-decoration: underline;
+
+                &.btn {
+                    color: #fff;
+                }
+            }
+
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid #eee;
+            line-height: 1.5;
+
+            img {
+                max-height: 80px;
+            }
+
+            a {
+                text-align: center;
+
+                &.btn {
+                    @include font-size(12);
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    // color: inherit;
+                    text-decoration: none;
+
+                    &.btn-block {
+                        padding: 6px 0;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-hover {
+        tbody {
+            tr {
+                &:hover {
+                    background: #f5f5f5;
+                }
+            }
+        }
+    }
+
+    &-cursor {
+        tbody {
+            tr {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .circle-image {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: auto;
+    }
+
+    tr[has-link] {
+        &:hover {
+            cursor: pointer;
+            background: rgba($color: $maincolor, $alpha: .4);
+        }
+    }
+
+}
+
+.table {
+    &-border {
+        border-top: 1px solid #eee;
+        border-right: 1px solid #eee;
+    }
+}

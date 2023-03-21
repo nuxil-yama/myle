@@ -1,0 +1,70 @@
+.input-steps {
+  &__row {
+    background: #fff;
+    border-radius: 0px;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+    @include box-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+
+    @include SP {
+      margin-top: 30px;
+    }
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 18px 15px 0 15px;
+      border-color: $maincolor transparent transparent transparent;
+      position: absolute;
+      top: -28px;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      @include SP {
+        border-width: 10px 10px 0 10px;
+        top: -18px;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    h1,
+    h2,
+    h3 {
+      display: block;
+      line-height: 1.5;
+      @include font-size(18);
+      @include letter-spacing(30);
+
+      @include SP {
+        @include font-size(16);
+      }
+    }
+  }
+
+  &__rightlink {
+    position: absolute;
+    right: 20px;
+    top: 32px;
+    @include font-size(12);
+    text-decoration: underline;
+    color: #36a8f1;
+
+    @include SP {
+      display: block;
+      text-align: right;
+      position: static;
+      margin-top: 20px;
+    }
+  }
+}

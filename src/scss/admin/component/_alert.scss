@@ -1,0 +1,33 @@
+.alert {
+  margin-top: 32px;
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  background-color: #cdd3d8;
+  @include shadow;
+
+  &-danger {
+    background: $dangercolor;
+  }
+
+  &-success {
+    background: $successcolor;
+  }
+
+  &-info {
+    background: $infocolor;
+  }
+
+  &-warning {
+    background: $warningcolor;
+  }
+
+  &-info {
+    background: $infocolor;
+  }
+}

@@ -1,0 +1,16 @@
+.alert {
+  margin-bottom: 32px;
+  background: #fff;
+  padding: 14px 24px;
+  line-height: 1.4;
+
+  &-danger {
+      background: #ffe4e4;
+      color: #b82d2d;
+  }
+
+  &-success {
+      background: #d9efdf;
+      color: #49a362;
+  }
+}

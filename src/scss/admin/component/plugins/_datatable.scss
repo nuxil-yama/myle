@@ -1,0 +1,117 @@
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+    margin-bottom: 16px;
+}
+
+.dataTables {
+
+    &_wrapper {
+        margin-top: 0px;
+
+        table.table.dataTable {
+            // padding-top: 10px;
+            margin: 0;
+
+            tbody {}
+        }
+    }
+
+
+    &_length {
+        @include SP {
+            float: left !important;
+        }
+
+        font-size: 12px !important;
+        position: relative;
+        top: 8px;
+
+        label {
+            position: relative;
+
+            &:before {
+                content: "";
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                right: 32px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                border-right: 2px solid #121212;
+                border-bottom: 2px solid #121212;
+                @include transform(rotate(45deg));
+            }
+
+            select {
+                padding: 16px;
+                padding-right: 20px;
+                border: 1px solid #ccc;
+
+                @include SP {
+                    padding: 10px 16px;
+                }
+            }
+        }
+    }
+
+    &_filter {
+        @include SP {
+            float: right !important;
+            margin: 0 !important;
+        }
+
+        label {
+            input {
+                padding: 12.5px 20px;
+                border: 1px solid #ccc;
+                @include font-size(12);
+
+                @include SP {
+                    padding: 6px 10px;
+                    width: 120px;
+                }
+            }
+        }
+    }
+
+    &_paginate {
+        padding-right: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        .paginate_button.current,
+        .paginate_button.current:hover {
+            background: #fff !important;
+            border: 1px solid #ccc !important;
+            border-radius: 0 !important;
+        }
+
+    }
+
+    &_info {
+        font-size: 11px !important;
+    }
+
+}
+
+
+.datatable-small {
+    .dataTables_length label select {
+        padding: 8px;
+        padding-right: 15px;
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+        padding: 8px;
+    }
+
+    table.table thead th,
+    table.table.dataTable thead th {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}

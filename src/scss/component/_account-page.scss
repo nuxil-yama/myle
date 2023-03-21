@@ -1,0 +1,104 @@
+.account-page {
+  max-width: 428px;
+  margin: auto;
+  width: 100%;
+  @include PC {
+    top: 50%;left: 50%;
+    @include transform(translate(-50%,-50%));
+    position: absolute;
+  }
+  @include SP {
+    padding-top: 100px;
+  }
+  &__row {
+    
+  }
+  &__col {
+    &--form {
+      &__box {
+        padding: 0 20px;
+        > img {
+          display: block;
+          margin: auto;
+          width: 161px;
+          height: auto;
+        }
+      }
+      &__line-btn {
+        text-align: center;
+        margin-top: 25px;
+        a {
+          width: 303px;
+          border-radius: 10px;
+          background: #06C755;
+          text-align: center;
+          display: inline-block;
+          position: relative;
+          height: 50px;
+          line-height: 50px;
+          img,span {
+            display: block;
+          }
+          img {
+            position: absolute;
+            left: 16px;
+            top: 0;bottom: 0;
+            margin: auto;width: 35px;height: 33px;
+          }
+          span {
+            color: #fff;
+
+          }
+        }
+      }
+      &__hr {
+        text-align: center;
+        overflow: hidden;
+        margin-top: 24px;
+        position: relative;
+        &:before {
+          content: "";
+          background: #E6E6E6;
+          width: 200%;
+          height: 1px;
+          position: absolute;
+          top: 0;bottom: 0;margin: auto;
+          left: 0;
+          z-index: 1;
+        }
+        span {
+          @include font-size(17);
+          display: inline-block;
+          background: #fff;
+          padding: 4px 16px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  .full {
+    text-align: center;
+    img {
+      display: inline-block;
+      width: 160px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      text-align: center;
+      @include font-size(24);
+      @include letter-spacing(30);
+    }
+    p {
+      text-align: left;
+      font-weight: normal;
+      margin-top: 40px;
+      @include font-size(14);
+      line-height: 1.7;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }  
+}
