@@ -1,0 +1,202 @@
+@charset "UTF-8";
+@import "../utility/variable";
+
+.header {
+    display: none;
+}
+
+.ttl-page {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    @media only screen and (max-width: 767px) {
+        font-size: 21px;
+        margin-bottom: 30px;
+    }
+}
+
+.sec-tokushoho {
+    padding: 80px 0 100px;
+    .inner {
+        max-width: 950px;
+        margin: 0 auto;
+        .bx {
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .ttl {
+                font-size: 16px;
+                letter-spacing: 0.1em;
+                line-height: 1.4em;
+                padding: 15px;
+                background: #efefef;
+                margin-bottom: 15px;
+            }
+            .txt {
+                font-size: 14px;
+                letter-spacing: 0.1em;
+                line-height: 1.8em;
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                }
+            }
+            .img {
+                width: 100%;
+                max-width: 600px;
+                margin: 20px 0;
+                display: block;
+            }
+            table {
+                margin-bottom: 20px;
+                th {
+                    font-size: 14px;
+                    vertical-align: top;
+                }
+                td {
+                    font-size: 14px;
+                    vertical-align: top;
+                }
+                .tar {
+                    text-align: right;
+                }
+            }
+            &.table01 {
+                table {
+                    width: 100%;
+                    th {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    td {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                }
+            }
+            &.table02 {
+                table {
+                    width: 50%;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 80px 0 70px;
+        .inner {
+            .bx {
+                margin-bottom: 30px;
+                .ttl {
+                    font-size: 14px;
+                }
+                .txt {
+                    font-size: 12px;
+                }
+                &.table02 {
+                    table {
+                        width: 100%;
+                        th:first-child,
+                        td:first-child {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sec-terms-of-service {
+    padding: 80px 0 100px;
+    .inner {
+        max-width: 950px;
+        margin: 0 auto;
+        font-weight: normal;
+        p {
+            font-size: 16px;
+            line-height: 1.6em;
+            letter-spacing: 0.05em;
+            margin: 20px 0;
+            &.tr {
+                text-align: right;
+                margin-top: 15px;
+            }
+        }
+        ol {
+            margin: 20px 0 0 35px;
+            li {
+                font-size: 16px;
+                line-height: 1.6em;
+                letter-spacing: 0.05em;
+                list-style: outside decimal;
+                margin-top: 10px;
+                ol {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        h2 {
+            font-size: 21px;
+            font-weight: bold;
+            margin: 40px 0 15px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 80px 0 70px;
+        .block {
+            max-width: 100%;
+            p {
+                font-size: 14px;
+                margin: 15px 0;
+                &.tr {
+                    margin-top: 15px;
+                }
+            }
+            ol {
+                margin: 15px 0 0 25px;
+                li {
+                    font-size: 14px;
+                    margin-top: 7px;
+                    ol {
+                        margin-bottom: 15px li {
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+            }
+            h2 {
+                font-size: 18px;
+                margin: 30px 0 10px;
+            }
+        }
+    }
+}
+
+.sec-privacy {
+    padding: 80px 0 100px;
+    .inner {
+        max-width: 950px;
+        font-weight: normal;
+        margin: 0 auto;
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.6em;
+            letter-spacing: 0.05em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 80px 0 70px;
+        .block {
+            max-width: 100%;
+            p {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
