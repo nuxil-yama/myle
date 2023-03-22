@@ -159,7 +159,7 @@
 							alt="LINEの友達を追加する"></a>
 				</div>
 				<div class="logo center">
-					<img src="{{url('dist/template/01/')}}/img/common/logo.png" width="144" alt="">
+					<img src="{{url('dist/images/logo.svg')}}" width="144" alt="">
 				</div>
 			</div>
 		</div>

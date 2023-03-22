@@ -23,7 +23,7 @@
 
 
       <div class="step__preview">
-        <iframe src="https://myle.nuxil.jp/shuji_yamagami" frameborder="0"></iframe>
+        <iframe src="{{url('/')}}/{{Auth::guard('web')->user()->url}}" frameborder="0"></iframe>
       </div>
 
       <div class="form-group__button mt-30">
