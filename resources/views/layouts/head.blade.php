@@ -23,6 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 
 <link href="/dist/css/style.min.css?{{date('Ymd')}}" rel="stylesheet">
+<link href="/static/assets/css/layout/custom.min.css?{{date('Ymd')}}" rel="stylesheet">
 <link rel="icon" href="{{url('/dist/images/favicon.ico')}}">
 <link rel="shortcut icon" href="{{url('/dist/images/favicon.ico')}}">
 <link rel="apple-touch-icon" href="/dist/images/apple-touch-icon.png">

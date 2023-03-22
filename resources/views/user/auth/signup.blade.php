@@ -66,6 +66,13 @@
                   </label>
                 </div>
 
+                <div class="note-term">
+                  <p class="txt">ご登録の前には以下の規約・ガイドラインをお読みください</p>
+                  <ul>
+                    <li><a href="{{url('/terms-of-service')}}">利用規約</a></li>
+                    <li><a href="{{url('/privacy')}}">個人情報の取扱について</a></li>
+                  </ul>
+                </div>
 
                 <div class="form-group__button mt-40">
                   <input type="hidden" name="g_recaptcha_response" id="g_recaptcha_response">

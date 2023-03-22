@@ -3,6 +3,7 @@
 /public/hot
 /public/storage
 /public/front/node_modules
+/public/static/node_modules
 /storage/*.key
 /vendor
 .env

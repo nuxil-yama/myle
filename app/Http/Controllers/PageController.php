@@ -17,4 +17,14 @@ class PageController extends Controller
     return view('page/tokushoho/index');
   }
 
+  public function termsOfService()
+  {
+    return view('page/terms-of-service/index');
+  }
+
+  public function privacy()
+  {
+    return view('page/privacy/index');
+  }
+
 }

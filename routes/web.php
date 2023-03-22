@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('', [App\Http\Controllers\PageController::class, 'index'])->name('top');
 Route::get('tokushoho', [App\Http\Controllers\PageController::class, 'tokushoho'])->name('top');
+Route::get('terms-of-service', [App\Http\Controllers\PageController::class, 'termsOfService'])->name('terms-of-service');
+Route::get('privacy', [App\Http\Controllers\PageController::class, 'privacy'])->name('privacy');
 
 Route::get('signup', [App\Http\Controllers\User\LoginController::class, 'signup'])->name('signup');
 Route::post('signup', [App\Http\Controllers\User\LoginController::class, 'signup_post'])->name('signup');
